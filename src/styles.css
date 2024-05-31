@@ -1,0 +1,144 @@
+html,
+body{
+    background: var(--default);
+}
+
+:root{
+    --default: #121213;
+    --empty: #3a3a3c;
+    --wrong: #b59f3b;
+    --right: #538d4e;
+}
+#game{
+    display: grid;
+    place-items: center;
+    width: 100%;
+    /*height: 600px;*/
+
+}
+
+.grid{
+    display: grid;
+    grid-template-rows: repeat(6, auto);
+    grid-template-columns: repeat(5, auto);
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.box{
+    height: 60px;
+    width: 60px;
+    border: 2px solid var(--empty);
+    margin: 4px;
+    color: white;
+    text-transform: uppercase;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.4rem;
+}
+
+.box.empty{
+    background: var(--empty);
+}
+
+.box.wrong{
+    background: var(--wrong);
+}
+
+.box.right{
+    background: var(--right);
+}
+
+.animated{
+    animation: flip 0.5s ease;
+}
+
+@keyframes flip {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+.popup{
+    color: white;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.2rem;
+    background-color: #05cdf5bf;
+    padding: 0.7rem;
+    border-radius: 0.9rem;
+    margin: 0.7rem;
+}
+
+#popcont{
+    position: absolute;
+    top: 4%;
+}
+
+#keyboard-container {
+    height: 200px;
+  }
+  
+  .keyboard-row {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    margin: 0 auto 8px;
+    touch-action: manipulation;
+  }
+  
+  .keyboard-row button {
+    font-family: inherit;
+    font-weight: bold;
+    border: 0;
+    padding: 0;
+    height: 58px;
+    cursor: pointer;
+    background-color: rgb(129, 131, 132);
+    color: rgb(215, 218, 220);
+    flex-grow: 1;
+    text-transform: uppercase;
+    margin-right: 6px;
+    border-radius: 4px;
+    user-select: none;
+  }
+
+  .keyboard-row .wrong{
+    background: var(--wrong);
+  }
+
+  .keyboard-row .right{
+    background: var(--right);
+  }
+
+  .keyboard-row .empty{
+    background: #28282a;
+  }
+  
+  .keyboard-row button.wide-button {
+    flex-grow: 1.5;
+  }
+  
+  .spacer-half {
+    flex-grow: 0.5;
+  }
+
+
+@media (max-width: 500px){
+
+    .keyboard-row {
+        display: flex;
+        justify-content: center;
+        width: 85%;
+        margin: 0 auto 8px;
+        touch-action: manipulation;
+      }
+}
