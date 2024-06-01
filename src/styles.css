@@ -2,6 +2,7 @@ html,
 body{
     background: var(--default);
     user-select: none;
+    -webkit-user-select: none;
 }
 
 :root{
