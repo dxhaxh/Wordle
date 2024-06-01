@@ -144,7 +144,8 @@ body{
       }
 
       #popcont{
-
+        right: 25%;
+        left: 25%;
       }
 
       .grid{
