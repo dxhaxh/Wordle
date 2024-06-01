@@ -1,6 +1,7 @@
 html,
 body{
     background: var(--default);
+    user-select: none;
 }
 
 :root{
