@@ -142,4 +142,18 @@ body{
         margin: 0 auto 8px;
         touch-action: manipulation;
       }
+
+      #popcont{
+
+      }
+
+      .grid{
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .box{
+        height: 50px;
+        width: 50px;
+    }
 }
